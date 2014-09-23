@@ -1,0 +1,17 @@
+{
+  "name": "ad-screen",
+  "version": "0.1.0",
+  "description": "ad-screen module description.",
+  "authors": [
+    {
+      "name": "LocalAd周培公",
+      "email": "peigong@foxmail.com",
+      "url": "https://github.com/peigong"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "~3.4.8",
+    "lodash": "~1.2.1"
+  }
+}

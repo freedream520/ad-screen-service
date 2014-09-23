@@ -1,0 +1,23 @@
+{
+  "name": "ad-screen",
+  "version": "0.1.0",
+  "description": "ad-screen description.",
+  "authors": [
+    {
+      "name": "LocalAd周培公",
+      "email": "peigong@foxmail.com",
+      "url": "https://github.com/peigong"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "node-server": "~0.1.8"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

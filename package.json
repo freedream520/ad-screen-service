@@ -1,0 +1,18 @@
+{
+  "name": "ad-screen",
+  "version": "0.1.0",
+  "description": "ad-screen project description.",
+  "authors": [
+    {
+      "name": "LocalAd周培公",
+      "email": "peigong@foxmail.com",
+      "url": "https://github.com/peigong"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.5.0"
+  }
+}
