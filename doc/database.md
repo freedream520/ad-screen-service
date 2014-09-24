@@ -8,7 +8,7 @@
 - title：组织机构的中文名称。
 - description：组织机构的描述信息。
 
-## 广告屏数据库 db_pro_screen ##
+## 广告屏数据库 db_ad_pro_basic ##
 
 ### 广告屏终端组 screen_groups ###
 
