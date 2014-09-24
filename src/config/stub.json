@@ -1,9 +1,0 @@
-{
-    "app": {
-        "http_port": "1314",
-        "vhost": ["www.ad-screen.com"],
-        "static_routes": [
-            { "path": "/config", "dir": "../config" }
-        ]
-    }
-}

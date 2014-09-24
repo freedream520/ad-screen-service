@@ -11,12 +11,14 @@ module.exports = function(grunt) {
     copy: {
       dist: {
         files: [ 
-          { expand: true, cwd: "bower_components/node-server/lib", src: ['**'], dest: 'dist/server' },
-          { expand: true, cwd: "bower_components/node-server/lib/config", src: ['package.json'], dest: 'dist/server' },
+          { expand: true, cwd: "bower_components/node-server/lib", src: ['**'], dest: 'dist/ad-screen/server' },
           { expand: true, cwd: "bower_components/node-server/lib/config", src: ['log4js.json'], dest: 'dist/config' },
-          { expand: true, cwd: "src/bin", src: ['**'], dest: 'dist/bin' },
-          { expand: true, cwd: "src/config", src: ['**'], dest: 'dist/config' },
-          { expand: true, cwd: "lib", src: ['**'], dest: 'dist/server' }
+          { expand: true, cwd: "bower_components/node-server/lib/config", src: ['log4js.json'], dest: 'dist/ad-screen/config' },
+          { expand: true, cwd: "src/data", src: ['**'], dest: 'dist/data' },
+          { expand: true, cwd: "src/config/dev", src: ['**'], dest: 'dist/ad-screen/config' },
+          { expand: true, cwd: "src/config/pro", src: ['**'], dest: 'dist/config' },
+          { expand: true, cwd: "src/bin", src: ['**'], dest: 'dist/ad-screen/bin' },
+          { expand: true, cwd: "src/server", src: ['logs/**'], dest: 'dist/ad-screen/server' }
         ]
       }
     }
