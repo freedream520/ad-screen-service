@@ -1,7 +1,7 @@
 {
-  "name": "ad-screen",
+  "name": "ad-screen-service",
   "version": "0.1.0",
-  "description": "ad-screen description.",
+  "description": "互联网广告屏的后端服务。",
   "authors": [
     {
       "name": "LocalAd周培公",

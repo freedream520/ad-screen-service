@@ -1,7 +1,7 @@
 {
-  "name": "ad-screen",
+  "name": "ad-screen-service",
   "version": "0.1.0",
-  "description": "ad-screen project description.",
+  "description": "互联网广告屏的后端服务。",
   "authors": [
     {
       "name": "LocalAd周培公",
@@ -13,6 +13,8 @@
   "devDependencies": {
     "grunt": "~0.4.4",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-copy": "~0.5.0"
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-replace": "~0.7.7",
+    "request": "~2.27.0"
   }
 }
