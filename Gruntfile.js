@@ -17,6 +17,7 @@ module.exports = function(grunt) {
           { expand: true, cwd: "lib", src: ['**'], dest: 'dist/ad-screen/server' },
           { expand: true, cwd: "src/data", src: ['**'], dest: 'dist/data' },
           { expand: true, cwd: "src/static", src: ['**'], dest: 'dist/static' },
+          { expand: true, cwd: "src/static", src: ['**'], dest: 'dist/ad-screen/static' },
           { expand: true, cwd: "src/config/dev", src: ['**'], dest: 'dist/ad-screen/config' },
           { expand: true, cwd: "src/config/pro", src: ['**'], dest: 'dist/config' },
           { expand: true, cwd: "src/bin", src: ['**'], dest: 'dist/ad-screen/bin' },
