@@ -11,7 +11,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "node-server": "~0.1.10"
+    "node-server": "~0.1.11"
   },
   "ignore": [
     "**/.*",
