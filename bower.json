@@ -11,7 +11,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "node-server": "~0.1.11"
+    "node-server": "~0.1.11",
+    "ad-screen": "https://github.com/com-localad/ad-screen.git"
   },
   "ignore": [
     "**/.*",
