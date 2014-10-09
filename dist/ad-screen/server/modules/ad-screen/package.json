@@ -1,0 +1,27 @@
+{
+  "name": "ad-screen",
+  "version": "0.1.0",
+  "description": "ad-screen module description.",
+  "authors": [
+    {
+      "name": "LocalAd周培公",
+      "email": "peigong@foxmail.com",
+      "url": "https://github.com/peigong"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "q": "~2.0.0",
+    "async": "~0.9.0",
+    "lodash": "~1.2.1",
+    "request": "~2.27.0",
+    "moment": "~2.7.0",
+    "mkdirp": "~0.5.0",
+    "redis": "~0.10.3",
+    "mongodb": "~1.4.7",
+    "generic-pool": "~2.1.1",
+    "socket.io": "~1.1.0",
+    "express": "~3.4.8",
+    "jquery-file-upload-middleware": "~0.1.7"
+  }
+}

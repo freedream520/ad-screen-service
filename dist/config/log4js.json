@@ -1,0 +1,20 @@
+{
+  "appenders": [
+    { "type": "console" },
+    {
+      "type": "dateFile", 
+      "absolute": false,
+      "filename": "logs/access.log", 
+      "pattern": "-yyyy-MM-dd",
+      "category": "access" 
+    },
+    {
+      "type": "dateFile", 
+      "absolute": false,
+      "filename": "logs/error.log", 
+      "pattern": "-yyyy-MM-dd",
+      "category": "error" 
+    }
+  ],
+  "replaceConsole": true
+}

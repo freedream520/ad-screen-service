@@ -1,0 +1,12 @@
+{
+  "name": "ad-screen-service",
+  "version": "0.1.0",
+  "description": "互联网广告屏的后端服务。",
+  "dependencies": {
+    "nopt": "~2.2.0",
+    "semver": "~2.2.1",
+    "express": "~3.5.1",
+    "lodash": "~2.4.1",
+    "log4js": "~0.6.12 "
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "app": {
+        "http_port": "8341",
+        "static_routes": [
+            { "path": "/uploads", "dir": "../../static/uploads" }
+        ]
+    }
+}
