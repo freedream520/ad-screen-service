@@ -34,7 +34,7 @@
 ### 建立软连接 ###
 
 	rm -rf /home/localad/ad-screen-service/ad-screen
-	ln -s /home/localad/ad-screen-service/release/ad-screen-service-{版本号} /home/localad/ad-screen-service/ad-screen
+	ln -s /home/localad/ad-screen-service/release/ad-screen-service-{版本号}/dist/ad-screen /home/localad/ad-screen-service/ad-screen
 
 ### 配置系统 ###
 
@@ -63,3 +63,20 @@
 3. `sh node-server.sh stop`：停止产品环境的Web服务。
 4. `sh node-server.sh restart`：重启产品环境的Web服务。
 
+## 防火墙策略 ##
+
+开启8341端口：
+
+	/sbin/iptables -I INPUT -p tcp --dport 8341 -j ACCEPT
+
+保存配置：
+
+	/etc/rc.d/init.d/iptables save
+
+重启服务：
+
+	/etc/rc.d/init.d/iptables restart
+
+查看端口是否已经开放：
+
+	/etc/init.d/iptables status 
