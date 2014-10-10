@@ -4,7 +4,7 @@
 
 - mongoDB服务需开启，最好设置为开机启动。
 
-环境依赖的部署安装，参考[http://www.localad.org.cn/requisites.html](http://www.localad.org.cn/requisites.html)
+环境依赖的部署安装，参考：[http://www.localad.org.cn/requisites.html](http://www.localad.org.cn/requisites.html)
 
 ## 部署服务的目录结构 ##
 
