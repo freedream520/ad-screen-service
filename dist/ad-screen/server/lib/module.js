@@ -37,13 +37,16 @@ ModuleManager.prototype = {
     * @param {String} part 路由、中间件、附件等配件所在的路径。
     */
     scanModule: function(module, part) {
-        var result = [];
-        if (fs.statSync(module).isDirectory()) {
-            var list = fs.readdirSync(path.join(module, part));
+        var result = [], part_path = path.join(module, part);
+        if (fs.existsSync(module) && 
+            fs.statSync(module).isDirectory() && 
+            fs.existsSync(part_path) && 
+            fs.statSync(part_path).isDirectory()) {
+            var list = fs.readdirSync(part_path);
             for (var i = 0; i < list.length; i++) {
                 var extname = path.extname(list[i]).toLowerCase();
                 if('.js' === extname || '.json' === extname || '.node' === extname){
-                    var file_path = path.join(module, part, list[i]);
+                    var file_path = path.join(part_path, list[i]);
                     if (fs.statSync(file_path).isFile()) {
                         result.push(file_path);
                     }

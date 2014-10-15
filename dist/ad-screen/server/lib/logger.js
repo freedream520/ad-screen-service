@@ -37,10 +37,6 @@ function setAppLogger(app){
   var error_logger = log4js.getLogger('error');
   access_logger.setLevel(level);
   app.use(log4js.connectLogger(access_logger, { 'level': level }));
-  app.use(express.errorHandler({
-      dumpExceptions: true,
-      showStack: true
-  }));
   app.use(function (err, req, res, next) {
     if (err) {
       var meta = '[' + new Date() + '] ' + req.url + '\n';
@@ -48,6 +44,10 @@ function setAppLogger(app){
     };
     next();
   });
+  app.use(express.errorHandler({
+      dumpExceptions: true,
+      showStack: true
+  }));
 }
 
 module.exports = {

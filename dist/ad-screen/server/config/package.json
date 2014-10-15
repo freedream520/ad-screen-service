@@ -7,6 +7,7 @@
     "semver": "~2.2.1",
     "express": "~3.5.1",
     "lodash": "~2.4.1",
-    "log4js": "~0.6.12 "
+    "log4js": "~0.6.12 ",
+    "connect-multiparty": "~1.2.5"
   }
 }

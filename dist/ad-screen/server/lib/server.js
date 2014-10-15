@@ -3,6 +3,7 @@ var fs        = require('fs');
 var path      = require('path');
 var http      = require('http');
 var express   = require('express');
+var multipart = require('connect-multiparty');
 var ServerMode      = require('./mode.js');
 var ConfigManager   = require('./config.js');
 var ModuleManager   = require('./module.js');
@@ -35,9 +36,6 @@ function Server(options) {
         cfg = cfg || {};
         var settings = this.config.merge(cfg);
 
-        //设置WEB应用全局的访问日志和错误日志
-        logger.setAppLogger(app);
-
         //扫瞄模块信息
         var manager = new ModuleManager();
         //加载模块中间件
@@ -52,7 +50,7 @@ function Server(options) {
             app.use(express.json());
         }
         if(settings.app.allowMultipart){
-            app.use(express.multipart());
+            app.use(multipart());
         }
         app.use(express.methodOverride());
         app.use(app.router);
@@ -82,6 +80,9 @@ function Server(options) {
                 app.use(route.path, express.static(absolute));
             };
         }
+
+        //设置WEB应用全局的访问日志和错误日志
+        logger.setAppLogger(app);
 
         var node = http.createServer(app);
         // 加载模块附件
