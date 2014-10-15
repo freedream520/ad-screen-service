@@ -46,6 +46,40 @@
 
 	cp -r /home/localad/ad-screen-service/release/ad-screen-service-{版本号}/dist/data /home/localad/ad-screen-service
 
+## 配置文件 ##
+
+### 应用的配置 ###
+
+配置文件：`config/settings.json`
+
+	{
+	    "serverHost": "http://113.10.167.163:8341",
+	    "uploadDir": "/home/localad/ad-screen-service/static/uploads"
+	}
+
+- **serverHost：**服务的地址（用于替换广告屏终端HTML中访问物料的服务地址）
+- **uploadDir：**上传物料的目标路径
+
+### Web服务器的配置 ###
+
+配置文件：`config/pro.json`
+
+	{
+	    "app": {
+	        "http_port": "8341",
+	        "static_routes": [
+	            { "path": "/uploads", "dir": "/home/localad/ad-screen-service/static/uploads" }
+	        ]
+	    }
+	}
+
+- **http_port：**服务的端口
+- **static_routes：**静态资源外部访问的配置
+
+### 数据库的配置 ###
+
+配置文件：`config/dao/mongodb.json`
+
 ## 启动系统服务 ##
 
 ### Windows测试环境 ###
