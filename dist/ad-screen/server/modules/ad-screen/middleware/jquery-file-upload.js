@@ -10,7 +10,7 @@ module.exports = function (app) {
         tmpDir = path.resolve(configDir, '..', 'tmp'),
         uploads = 'uploads',
         uploadDir = path.resolve(configDir, '..', 'static', uploads);
-        
+    console.log(uploadDir);        
     // configure upload middleware
     upload.configure({
         tmpDir: tmpDir,

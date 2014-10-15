@@ -77,6 +77,7 @@ function Server(options) {
             for (var i = 0; i < routes.length; i++) {
                 var route = routes[i];
                 var absolute = path.normalize(path.resolve(__dirname, '..', route.dir));
+                console.log(absolute);
                 app.use(route.path, express.static(absolute));
             };
         }
