@@ -36,6 +36,9 @@ function Server(options) {
         cfg = cfg || {};
         var settings = this.config.merge(cfg);
 
+        //设置WEB应用全局的访问日志
+        logger.setAccessLogger(app);
+
         //扫瞄模块信息
         var manager = new ModuleManager();
         //加载模块中间件
@@ -77,13 +80,12 @@ function Server(options) {
             for (var i = 0; i < routes.length; i++) {
                 var route = routes[i];
                 var absolute = path.normalize(path.resolve(__dirname, '..', route.dir));
-                console.log(absolute);
                 app.use(route.path, express.static(absolute));
             };
         }
 
-        //设置WEB应用全局的访问日志和错误日志
-        logger.setAppLogger(app);
+        //设置WEB应用全局的错误日志
+        logger.setErrorLogger(app);
 
         var node = http.createServer(app);
         // 加载模块附件

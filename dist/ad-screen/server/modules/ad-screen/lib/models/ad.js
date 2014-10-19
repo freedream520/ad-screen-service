@@ -1,12 +1,12 @@
-var Q = require('q');
+var Q = require('q'),
+    createGUID = require('server-helpers').createGUID;
 
 var observer = require('./observer.js'),
-    dao = require('../dao/ad.js'),
-    util = require('../helpers/util.js');
+    dao = require('../dao/ad.js');
 
 function Ad(org, id){
     org = org || '';
-    this.id = !!id ? id.trim() : util.createGUID();
+    this.id = !!id ? id.trim() : createGUID();
     this.data = { org: org };
 }
 

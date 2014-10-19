@@ -1,0 +1,4 @@
+﻿{
+    "serverHost": "http://127.0.0.1:8341",
+    "uploadDir": "../static/uploads"
+}

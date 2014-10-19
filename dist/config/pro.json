@@ -2,7 +2,7 @@
     "app": {
         "http_port": "8341",
         "static_routes": [
-            { "path": "/uploads", "dir": "../../static/uploads" }
+            { "path": "/uploads", "dir": "/home/localad/ad-screen-service/static/uploads" }
         ]
     }
 }

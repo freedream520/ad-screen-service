@@ -21,10 +21,10 @@ function init(app){
 }
 
 /**
-* 设置WEB应用全局的访问日志和错误日志。
+* 设置WEB应用全局的访问日志。
 * @param {Express} app WEB应用对象实例。
 */
-function setAppLogger(app){
+function setAccessLogger(app){
   var mode = app.get('mode');
   var level = 'INFO';
   switch(mode){
@@ -34,9 +34,16 @@ function setAppLogger(app){
       break;
   }
   var access_logger = log4js.getLogger('access');
-  var error_logger = log4js.getLogger('error');
   access_logger.setLevel(level);
   app.use(log4js.connectLogger(access_logger, { 'level': level }));
+}
+
+/**
+* 设置WEB应用全局的错误日志。
+* @param {Express} app WEB应用对象实例。
+*/
+function setErrorLogger(app){
+  var error_logger = log4js.getLogger('error');
   app.use(function (err, req, res, next) {
     if (err) {
       var meta = '[' + new Date() + '] ' + req.url + '\n';
@@ -52,5 +59,6 @@ function setAppLogger(app){
 
 module.exports = {
   init: init,
-  setAppLogger: setAppLogger
+  setAccessLogger: setAccessLogger,
+  setErrorLogger: setErrorLogger
 };

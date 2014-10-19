@@ -1,5 +1,7 @@
 var Q = require('q');
-var mongodb = require('../helpers/dao/mongodb/mongodb.js');
+var config = require('../config.js');
+var mongodb,
+    createMongoDb = require('server-helpers').mongodb;
 
 var dbname = 'basic';
 
@@ -9,8 +11,16 @@ var keeper = {
     }
 };
 
+function getMongoDb(){
+    if(!mongodb){
+        var settings = config.getSettings('mongodb');
+        mongodb = createMongoDb(settings)
+    }
+    return mongodb;
+}
+
 function save(data){
-    var deferred = Q.defer();
+    var deferred = Q.defer(), mongodb = getMongoDb();
     mongodb.connect(dbname)
     .then(function(db){
         var collection = db.collection('ad_screens');
@@ -33,7 +43,7 @@ function save(data){
 }
 
 function getList(){
-    var deferred = Q.defer();
+    var deferred = Q.defer(), mongodb = getMongoDb();
     mongodb.connect(dbname)
     .then(function(db){
         var collection = db.collection('ad_screens');
@@ -55,7 +65,7 @@ function getList(){
 function load(id, fields){
     fields = fields || {};
     fields._id = 0;
-    var deferred = Q.defer();
+    var deferred = Q.defer(), mongodb = getMongoDb();
     mongodb.connect(dbname)
     .then(function(db){
         var collection = db.collection('ad_screens');
