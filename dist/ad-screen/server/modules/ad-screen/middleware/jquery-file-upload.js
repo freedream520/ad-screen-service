@@ -4,8 +4,8 @@ var path = require('path'),
     upload = require('jquery-file-upload-middleware');
 
 var uploadUrl = '/ad-screen/api/upload';
-var config = require('../lib').config,
-    privatePath = require('../lib').path;
+var config = require('../lib').config;
+    //privatePath = require('../lib').path;
 
 module.exports = function (app) {
     var uploadDir,
@@ -44,7 +44,7 @@ module.exports = function (app) {
                     uploadDir = settings.uploadDir;
                     if(!uploadDir){
                         uploadDir = path.resolve(configDir, '..', 'static', uploads);
-                    }else if(!privatePath.isAbsolute(uploadDir)){
+                    }else{// if(!privatePath.isAbsolute(uploadDir)){
                         uploadDir = path.resolve(configDir, '..', 'server', uploadDir);
                     }
                 }
