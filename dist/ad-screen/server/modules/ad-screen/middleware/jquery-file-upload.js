@@ -5,7 +5,6 @@ var path = require('path'),
 
 var uploadUrl = '/ad-screen/api/upload';
 var config = require('../lib').config;
-    //privatePath = require('../lib').path;
 
 module.exports = function (app) {
     var uploadDir,
@@ -44,7 +43,7 @@ module.exports = function (app) {
                     uploadDir = settings.uploadDir;
                     if(!uploadDir){
                         uploadDir = path.resolve(configDir, '..', 'static', uploads);
-                    }else{// if(!privatePath.isAbsolute(uploadDir)){
+                    }else{
                         uploadDir = path.resolve(configDir, '..', 'server', uploadDir);
                     }
                 }
