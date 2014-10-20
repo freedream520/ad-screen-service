@@ -22,7 +22,7 @@ start(){
     if [ ! -z $pid ]; then
         echo 'server is already running'
     else
-        nohup node ../server/bin/run-server.js -m pro -c ../../config > /dev/null &
+        nohup node ../server/bin/run-server.js -m pro -c ../../../../../config > /dev/null &
         echo 'server is running ...'
         echo $! > $PIDFILE
         echo 'server is run!'
