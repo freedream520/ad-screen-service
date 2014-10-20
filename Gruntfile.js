@@ -14,7 +14,6 @@ module.exports = function(grunt) {
           { expand: true, cwd: "bower_components/node-server/lib", src: ['**'], dest: 'dist/ad-screen/server' },
           { expand: true, cwd: "bower_components/node-server/lib/config", src: ['log4js.json'], dest: 'dist/config' },
           { expand: true, cwd: "bower_components/node-server/lib/config", src: ['log4js.json'], dest: 'dist/ad-screen/config' },
-          { expand: true, cwd: "bower_components/ad-screen/dist", src: ['index.html'], dest: 'dist/templates' },
           { expand: true, cwd: "bower_components/ad-screen/dist", src: ['index.html'], dest: 'dist/ad-screen/templates' },
           { expand: true, cwd: "lib", src: ['**'], dest: 'dist/ad-screen/server' },
           { expand: true, cwd: "src/data", src: ['**'], dest: 'dist/data' },

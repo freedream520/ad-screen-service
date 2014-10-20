@@ -12,8 +12,7 @@ var org = 'stbm',
 
 module.exports = function (app) {
     var adScreenService,
-        configDir = app.get('configDir'),
-        templateFilename = path.resolve(configDir, '..', 'templates/index.html');
+        templateFilename = path.resolve(__dirname, '..', '..', '..', '..', 'templates/index.html');
     app.get('/ad-screen/:sn', function (req, res) {
         var sn = req.params.sn || '';
         if(!adScreenService){

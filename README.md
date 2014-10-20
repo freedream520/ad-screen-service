@@ -53,7 +53,7 @@
 配置文件：`config/settings.json`
 
 	{
-	    "serverHost": "http://113.10.167.163:8341",
+	    "adScreenService": "http://113.10.167.163:8341",
 	    "uploadDir": "/home/localad/ad-screen-service/static/uploads"
 	}
 
