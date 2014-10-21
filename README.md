@@ -53,11 +53,11 @@
 配置文件：`config/settings.json`
 
 	{
-	    "adScreenService": "http://113.10.167.163:8341",
+	    "adScreenService": "",
 	    "uploadDir": "/home/localad/ad-screen-service/static/uploads"
 	}
 
-- **serverHost：**服务的地址（用于替换广告屏终端HTML中访问物料的服务地址）
+- **serverHost：**服务的地址（用于替换广告屏终端HTML中访问物料的服务地址，默认为空字符串）
 - **uploadDir：**上传物料的目标路径
 
 ### Web服务器的配置 ###
